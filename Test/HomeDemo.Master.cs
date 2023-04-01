@@ -17,11 +17,22 @@ namespace Test
           protected void btnAccountCreation_Click(object sender, EventArgs e)
           {
 
+            Response.Redirect("CreateAccount.aspx", false);
           }
 
           protected void btnLogin_Click(object sender, EventArgs e)
           {
-
+            Response.Redirect("UserLogin.aspx", false);
           }
-     }
+
+          protected void btnLogOut_Click(object sender, EventArgs e)
+          {
+            
+          }
+
+          protected void btnUserDashboard_Click(object sender, EventArgs e)
+          {
+            Response.Redirect("UserDashBoard.aspx", false);
+          }
+    }
 }

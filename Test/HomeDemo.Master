@@ -19,9 +19,10 @@
      <!--FontAwesome-->
      <link href="fontawesome-free-6.3.0-web/css/all.css" rel="stylesheet" />
 
-     <!-- Custom CSS stule sheet -->
-     <link href="css custom/Style.css" rel="stylesheet" />
-    
+     <!-- Custom CSS stule sheet and JS -->
+     <link href="css%20and%20js%20custom/Style.css" rel="stylesheet" />
+
+
       <!-- Bootstrap JS Bundle with Popper-->
      <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -41,13 +42,13 @@
      <header>
           <div class="p-1" id="topHeader">
 
-               <div class="container ">
+               <div class="container-fluid">
                     <div class="row">
 
                          <div class="col-12 text-lg-end">
 
-                              <a class="p-1" href="tel:direct call"> <i class="fa-solid fa-phone-flip p-1"></i>+(00) 123456789</a>
-                              <a class="p-1" href="mailto:direct_mail"> <i class="fa-solid fa-envelope p-1"></i>abs@uhcl.edu</a>
+                              <a class="p-1" href="tel:direct call"> <i class="fa-solid fa-phone-flip p-1"></i>281-283-3700</a>
+                              <a class="p-1" href="mailto:los.senores.help@gmail.com"> <i class="fa-solid fa-envelope p-1"></i>los.senores.help@gmail.com</a>
 
 
                          </div>
@@ -62,9 +63,9 @@
 
                     <nav class="navbar navbar-dark  navbar-expand-md " style="background-color: #636e72">
 
-                         <a class="navbar-brand" href="#" style="margin-inline: 10px ">
-                              <img class="img-fluid" src="img/octopus.png" alt="" />
-                              <a class="navbar-brand" style="margin-inline: 10px;">Tako Resume</a>
+                         <a class="navbar-brand" style="margin-inline: 10px ">
+                              <img class="img-fluid" src="img/logo.png" style="width: 80px;height: 80px;" alt="" />
+                              <a class="navbar-brand" style="margin-inline: 10px;">TakoResume</a>
                          </a>
 
                          <button data-bs-toggle="collapse" data-bs-target="#navbarToggler" type="button" class="navbar-toggler" style="margin-inline:10px">
@@ -75,38 +76,47 @@
                               <ul class="navbar-nav me-auto mb-2 mb-lg-0" style=" margin-inline: 10px">
 
                                    <li class="nav-item active">
-                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                        <a class="nav-link active" aria-current="page" href="Home.aspx">Home</a>
                                    </li>
 
                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button"
+                                        <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" role="button"
                                            href="#">Resumes</a>
                                         <div class="dropdown-menu">
-                                             <a class="dropdown-item" href="#">Resumes Builder</a>
+                                             <a class="dropdown-item" href="TemplateSelection.aspx">Resumes Builder</a>
                                              <div class="dropdown-divider"></div>
                                              <a class="dropdown-item" href="#">Resumes Checker</a>
                                         </div>
                                    </li>
 
                                    <li class="nav-item-active">
-                                        <a class="nav-link" href="#">About Us</a>
+                                        <a class="nav-link active" href="#">About Us</a>
                                    </li>
 
                                    <li class="nav-item-active">
-                                        <a class="nav-link" href="#">Contact Us</a>
+                                        <a class="nav-link active" href="#">Contact Us</a>
                                    </li>
 
                                   </ul>
 
                               <ul class="navbar-nav" style=" margin-inline: 10px">
                                    <li class="nav-item active">
-                                        <asp:LinkButton class ="nav-link" ID="btnAccountCreation" runat="server"
+                                        <asp:LinkButton class ="nav-link active" ID="btnAccountCreation" runat="server"
                                              OnClick="btnAccountCreation_Click">Create Account</asp:LinkButton>
                                    </li>
                                    <li class="nav-item active">
-                                        <asp:LinkButton class ="nav-link" ID="btnLogin" runat="server"
+                                        <asp:LinkButton class ="nav-link active" ID="btnLogin" runat="server"
                                              OnClick="btnLogin_Click">Log In</asp:LinkButton>
                                    </li>
+                                   <li class="nav-item active">
+                                        <asp:LinkButton class ="nav-link active" ID="btnLogout" runat="server"
+                                             OnClick="btnLogOut_Click">Log Out</asp:LinkButton>
+                                   </li>
+                                   <li class="nav-item active">
+                                        <asp:LinkButton class ="nav-link active" ID="btnDashboard" runat="server"
+                                             OnClick="btnUserDashboard_Click">User Dashboard</asp:LinkButton>
+                                   </li>
+
                               </ul>
 
 
@@ -142,9 +152,9 @@
 
                     <div class="col-md-3">
 
-                         <img class="img-fluid fa-bounce" src="img/octopus.png" alt="" />
+                         <img class="img-fluid fa-bounce" src="img/logo.png" style="width: 80px;height: 80px;" alt="" />
                          <p>
-                              Resume building website created by the TacoTeam UHCL ...<a href="#">Read More</a>...
+                              TakoResume was created by the Los Senores team at the University of Houston - Clear Lake <a href="About Us.aspx">Learn More</a>
 
                          </p>
                          <a style="color: #a29bfe;" class="p-1" href="#"><i class="fa-brands fa-2x fa-github"></i></a>
@@ -157,8 +167,8 @@
 
                          <h3>Important Links</h3>
                          <a href=" #">Privacy Policy</a><br>
-                         <a href=" #">Univercity of Houston - Clear Lake</a><br>
-                         <a href=" #">Resouces</a><br>
+                         <a href="https://www.uhcl.edu/science-engineering/">UHCL College of Science and Engineering</a><br>
+                         <a href=" #">Resources</a><br>
 
                     </div>
 
@@ -168,15 +178,15 @@
                          <a href=" #">Resume Builder</a><br>
                          <a href=" #">Resume Checker</a><br>
                          <a href=" #">Upload Resume</a><br>
-                         <a href=" #">File Convertion</a><br>
+                         <a href=" #">File Conversion</a><br>
 
                     </div>
 
                     <div class="col-md-3">
 
                          <h3>Contact Us</h3>
-                         <a class="p-1" href="tel:direct call"> <i class="fa-solid fa-phone-flip p-1 fa-shake"></i>+(00) 123456789</a><br>
-                         <a class="p-1" href="mailto:direct_mail"> <i class="fa-solid fa-envelope p-1 fa-flip"></i>abs@uhcl.edu</a>
+                         <a class="p-1" href="tel:direct call"> <i class="fa-solid fa-phone-flip p-1 fa-shake"></i>281-283-3700</a><br>
+                         <a class="p-1" href="mailto:los.senores.help@gmail.com"> <i class="fa-solid fa-envelope p-1 fa-flip"></i>los.senores.help@gmail.com</a>
                          <div class="embed-responsive embed-responsive-16x9">
                               <iframe class="ratio > *"
                                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3469.79133482685!2d-95.10128378397869!3d29.580674047284248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86409dcd00161205%3A0xf1914da077431586!2sUniversity%20of%20Houston-Clear%20Lake!5e0!3m2!1sen!2sus!4v1677357796427!5m2!1sen!2sus"
